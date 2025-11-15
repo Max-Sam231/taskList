@@ -15,6 +15,10 @@ export default function Home() {
     { id: 2, title: "Изучить TypeScript", completed: true },
   ]);
 
+
+
+
+  
   const ToggleComplet = (id: number) => {
     setTasks((prev) =>
       prev.map((task) =>
@@ -47,7 +51,7 @@ export default function Home() {
       <p>
         Выполнено {countComplet} из {tasks.length}
       </p>
-      <TaskForm onAdd={addTask}/>
+      <TaskForm onAdd={addTask} />
       <TaskList tasks={tasks} onToggle={ToggleComplet} onDelete={deleteTask} />
     </div>
   );
